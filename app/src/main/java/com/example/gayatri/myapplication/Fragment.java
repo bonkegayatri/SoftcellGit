@@ -32,6 +32,8 @@ public class Fragment extends android.support.v4.app.Fragment {
     ArrayList<PojoClass> mList;
     AdapterPage adapterPage;
 
+    public static final String URL = "https://reqres.in/api/users?page=2";
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -47,10 +49,10 @@ public class Fragment extends android.support.v4.app.Fragment {
         recyclerView.setAdapter( adapterPage );
 
 
-        String url = "https://reqres.in/api/users?page=2";
+
         RequestQueue requestQueue = Volley.newRequestQueue( getContext() );
 
-        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, null,
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, URL, null,
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
