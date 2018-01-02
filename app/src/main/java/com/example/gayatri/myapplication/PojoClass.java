@@ -1,9 +1,11 @@
 package com.example.gayatri.myapplication;
 
+import java.io.Serializable;
+
 /**
  * Created by gayatri on 2/1/18.
  */
-public class PojoClass {
+public class PojoClass implements Serializable{
 
 
     String id,first_name,last_name,avatar;
