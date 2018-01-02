@@ -28,9 +28,9 @@ import java.util.ArrayList;
 public class Fragment extends android.support.v4.app.Fragment {
 
 
-    RecyclerView recyclerView;
-    ArrayList<PojoClass> mList;
-    AdapterPage adapterPage;
+    private RecyclerView recyclerView;
+    private ArrayList<PojoClass> mList;
+    private AdapterPage adapterPage;
 
     public static final String URL = "https://reqres.in/api/users?page=2";
 

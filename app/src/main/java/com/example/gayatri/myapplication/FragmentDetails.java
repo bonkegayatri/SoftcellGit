@@ -36,7 +36,7 @@ public class FragmentDetails extends android.support.v4.app.Fragment {
         PojoClass pojoClass= (PojoClass) bundle.getSerializable("Data");
 
 
-        mtxt_Last_Name.setText(pojoClass.getLast_name());
+        mtxt_Last_Name.setText(pojoClass.getLast_name() +" "+pojoClass.getLast_name());
         mtxt_First_Name.setText(pojoClass.getFirst_name());
         Picasso.with(getActivity()).load(pojoClass.getAvatar()).into(mImageView);
 
