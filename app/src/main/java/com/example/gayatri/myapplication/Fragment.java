@@ -106,7 +106,6 @@ public class Fragment extends android.support.v4.app.Fragment {
 
 
         inflater.inflate( R.menu.add_menu,menu);
-
         super.onCreateOptionsMenu(menu, inflater);
     }
 
