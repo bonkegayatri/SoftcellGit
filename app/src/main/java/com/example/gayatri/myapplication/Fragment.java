@@ -1,11 +1,15 @@
 package com.example.gayatri.myapplication;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.annotation.RequiresApi;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -34,6 +38,7 @@ public class Fragment extends android.support.v4.app.Fragment {
 
     public static final String URL = "https://reqres.in/api/users?page=2";
 
+    @RequiresApi(api = Build.VERSION_CODES.GINGERBREAD)
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -47,6 +52,7 @@ public class Fragment extends android.support.v4.app.Fragment {
         mList = new ArrayList<>();
         adapterPage = new AdapterPage( mList );
         recyclerView.setAdapter( adapterPage );
+        setHasOptionsMenu(true);
 
 
 
@@ -95,5 +101,11 @@ public class Fragment extends android.support.v4.app.Fragment {
 
         requestQueue.add( jsonObjectRequest );
         return view;
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        super.onCreateOptionsMenu(menu, inflater);
+        inflater.inflate(R.menu.menu_add,menu);
     }
 }
