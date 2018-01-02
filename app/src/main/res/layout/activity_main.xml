@@ -10,6 +10,11 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.gayatri.myapplication.MainActivity">
 
+    <TextView
+        android:text=" Welcome To SoftCell Technologies "
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"/>
     <fragment
         android:id="@+id/fragmentpage"
         android:name="com.example.gayatri.myapplication.Fragment"
