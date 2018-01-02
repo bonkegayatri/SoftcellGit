@@ -1,7 +1,9 @@
 package com.example.gayatri.myapplication;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.annotation.RequiresApi;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -32,6 +34,7 @@ public class Fragment extends android.support.v4.app.Fragment {
     ArrayList<PojoClass> mList;
     AdapterPage adapterPage;
 
+    @RequiresApi(api = Build.VERSION_CODES.GINGERBREAD)
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
