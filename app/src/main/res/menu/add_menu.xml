@@ -2,6 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item android:title="option"
+        android:id="@+id/additem"
         android:icon="@mipmap/ic_launcher">
     </item>
 </menu>
