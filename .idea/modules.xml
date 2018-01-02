@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/SoftcellGit.iml" filepath="$PROJECT_DIR$/SoftcellGit.iml" />
       <module fileurl="file://F:\Android\Softcell\SoftcellGit\SoftcellGit.iml" filepath="F:\Android\Softcell\SoftcellGit\SoftcellGit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SoftcellGit.iml" filepath="$PROJECT_DIR$/SoftcellGit.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
