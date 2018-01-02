@@ -6,6 +6,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -37,6 +39,8 @@ public class Fragment extends android.support.v4.app.Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         View view = inflater.inflate( R.layout.lay_fragment,null);
+
+        setHasOptionsMenu( true );
 
         recyclerView = view.findViewById( R.id.recyclerView);
         recyclerView.setLayoutManager( new LinearLayoutManager( getContext(),LinearLayoutManager.VERTICAL,false));
@@ -93,5 +97,14 @@ public class Fragment extends android.support.v4.app.Fragment {
 
         requestQueue.add( jsonObjectRequest );
         return view;
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+
+
+        inflater.inflate( R.menu.add_menu,menu);
+
+        super.onCreateOptionsMenu(menu, inflater);
     }
 }
